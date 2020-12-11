@@ -54,7 +54,7 @@ class DrumApp extends React.Component {
         KeyA: {name:"clap", ref: '', src: clap, letter: "A"},
         KeyS: {name:"hiHat", ref: '', src: hiHat, letter: "S"},
         KeyD: {name:"kick", ref: '', src: kick, letter: "D"},
-        KeyF: {name:"openHat", ref: '', src: openHat, letter: "F"},
+        KeyF: {name:"o-Hat", ref: '', src: openHat, letter: "F"},
         KeyG: {name:"boom", ref: '', src: boomMP3, letter: "G"},
         KeyJ: {name:"ride", ref: '', src: ride, letter: "J"},
         KeyK: {name:"snare", ref: '', src: snare, letter: "K"},

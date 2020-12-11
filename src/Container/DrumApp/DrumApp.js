@@ -48,8 +48,10 @@ class DrumApp extends React.Component {
             return {[key]: true, drumming: true}
         })
 
-        this.drumMapping[key].ref.current.currentTime = 0
-        this.drumMapping[key].ref.current.play()
+        if(this.drumMapping[key].ref){
+            this.drumMapping[key].ref.current.currentTime = 0
+            this.drumMapping[key].ref.current.play()
+        }
     }
 
     endHandler= (event) => {
@@ -91,7 +93,7 @@ class DrumApp extends React.Component {
             KeyA: {name:"clap", ref: this.sound1, src: clap, letter: "A"},
             KeyS: {name:"hiHat", ref: this.sound2, src: hiHat, letter: "S"},
             KeyD: {name:"kick", ref: this.sound3, src: kick, letter: "D"},
-            KeyF: {name:"openHat", ref: this.sound4, src: openHat, letter: "F"},
+            KeyF: {name:"oHat", ref: this.sound4, src: openHat, letter: "F"},
             KeyG: {name:"boom", ref: this.sound5, src: boom, letter: "G"},
             KeyJ: {name:"ride", ref: this.sound6, src: ride, letter: "J"},
             KeyK: {name:"snare", ref: this.sound7, src: snare, letter: "K"},

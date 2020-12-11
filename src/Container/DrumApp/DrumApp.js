@@ -12,6 +12,7 @@ import ride from '../../assets/sounds/ride.wav'
 import snare from '../../assets/sounds/snare.wav'
 import tink from '../../assets/sounds/tink.wav'
 import tom from '../../assets/sounds/tom.wav'
+import boomMP3 from '../../assets/sounds/boom.mp3'
 
 
 class DrumApp extends React.Component {
@@ -65,7 +66,7 @@ class DrumApp extends React.Component {
         KeyS: {name:"hiHat", ref: '', src: hiHat, letter: "S"},
         KeyD: {name:"kick", ref: '', src: kick, letter: "D"},
         KeyF: {name:"openHat", ref: '', src: openHat, letter: "F"},
-        KeyG: {name:"boom", ref: '', src: boom, letter: "G"},
+        KeyG: {name:"boom", ref: '', src: boomMP3, letter: "G"},
         KeyJ: {name:"ride", ref: '', src: ride, letter: "J"},
         KeyK: {name:"snare", ref: '', src: snare, letter: "K"},
         KeyL: {name:"tink", ref: '', src: tink, letter: "L"},
@@ -88,18 +89,6 @@ class DrumApp extends React.Component {
     ]
 
     render() {
-
-        this.drumMapping = {
-            KeyA: {name:"clap", ref: this.sound1, src: clap, letter: "A"},
-            KeyS: {name:"hiHat", ref: this.sound2, src: hiHat, letter: "S"},
-            KeyD: {name:"kick", ref: this.sound3, src: kick, letter: "D"},
-            KeyF: {name:"oHat", ref: this.sound4, src: openHat, letter: "F"},
-            KeyG: {name:"boom", ref: this.sound5, src: boom, letter: "G"},
-            KeyJ: {name:"ride", ref: this.sound6, src: ride, letter: "J"},
-            KeyK: {name:"snare", ref: this.sound7, src: snare, letter: "K"},
-            KeyL: {name:"tink", ref: this.sound8, src: tink, letter: "L"},
-            Semicolon: {name:"tom", ref: this.sound9, src: tom, letter: ":"},
-        }
 
         let drums = []
         for(let key in this.drumMapping){

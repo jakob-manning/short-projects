@@ -13,7 +13,8 @@ class DrumKey extends React.Component {
         if (this.props.playing) {
             playingStyle = classes.playing
 
-            if(this.soundRef){
+            if(this.soundRef.current){
+                console.log(this.soundRef)
                 this.soundRef.current.currentTime = 0
                 this.soundRef.current.play()
             }

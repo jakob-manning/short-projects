@@ -1,0 +1,36 @@
+.DrumKey {
+    border: 5px solid black;
+    border-radius: 10px;
+    transition: all .07s ease;
+    margin: 1vw;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 10px black;
+    padding: 2px;
+
+    /*width: 20vw;*/
+    flex-grow: 10;
+    flex-shrink: 10;
+
+}
+
+.playing {
+    transform:scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+.subTitle {
+    overflow: hidden;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+
+.Letter{
+    display: block;
+    font-size: 5vw;
+    font-family: "Bookman Old Style";
+}

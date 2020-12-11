@@ -48,10 +48,10 @@ class DrumApp extends React.Component {
             return {[key]: true, drumming: true}
         })
 
-        if(this.drumMapping[key].ref){
-            this.drumMapping[key].ref.current.currentTime = 0
-            this.drumMapping[key].ref.current.play()
-        }
+        // if(this.drumMapping[key].ref){
+        //     this.drumMapping[key].ref.current.currentTime = 0
+        //     this.drumMapping[key].ref.current.play()
+        // }
     }
 
     endHandler= (event) => {
@@ -112,12 +112,7 @@ class DrumApp extends React.Component {
                     drumName={this.drumMapping[key].name}
                     end={this.endHandler}
                     letter={this.drumMapping[key].letter}
-                />,
-                <audio
-                    key={"Audio" + [key]}
-                    ref={this.drumMapping[key].ref}
                     src={this.drumMapping[key].src}
-                    type={"audio/wav"}
                 />
                 )
         }

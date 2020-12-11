@@ -1,24 +1,37 @@
 import React from 'react'
 import classes from './DrumKey.module.css'
 
-function DrumKey(props) {
-    let playingStyle = []
-
-    if(props.playing){
-        playingStyle = classes.playing
+class DrumKey extends React.Component {
+    constructor(props) {
+        super(props);
+        this.soundRef = React.createRef();
     }
 
-    return (
-        <button name={props.name}
-                className={[classes.DrumKey, playingStyle].join(' ')}
-                onClick={() => props.click(props.name)}
-                onTransitionEnd={props.end}
-        >
-            <div className={classes.Letter}>{props.letter}</div>
-            <span className={classes.subTitle}>{props.drumName.toUpperCase()}</span>
+    render() {
+        let playingStyle = []
 
-        </button>
-    )
+        if (this.props.playing) {
+            playingStyle = classes.playing
+
+            if(this.soundRef){
+                this.soundRef.current.currentTime = 0
+                this.soundRef.current.play()
+            }
+
+        }
+
+        return (
+            <button name={this.props.name}
+                    className={[classes.DrumKey, playingStyle].join(' ')}
+                    onClick={() => this.props.click(this.props.name)}
+                    onTransitionEnd={this.props.end}
+            >
+                <div className={classes.Letter}>{this.props.letter}</div>
+                <span className={classes.subTitle}>{this.props.drumName.toUpperCase()}</span>
+                <audio src={this.props.src} ref={this.soundRef}/>
+            </button>
+        )
+    }
 }
 
 export default DrumKey

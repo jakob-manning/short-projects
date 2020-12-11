@@ -105,7 +105,7 @@ class DrumApp extends React.Component {
         return (
             <Auxiliary>
                 <div className={[classes.Title,textBlur].join(' ')}>{"Are you ready to rock?"}</div>
-                <div onChange={this.changeHandler}>
+                <div>
                     <img className={[classes.DrumImage, blur].join(' ')} src={DrumImage} alt={"view of drumming on stage"}/>
                     <div className={classes.DrumKit}>
                         {drums}

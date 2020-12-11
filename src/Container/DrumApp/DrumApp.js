@@ -3,16 +3,16 @@ import DrumKey from "../../Components/DrumKey/DrumKey";
 import classes from './DrumApp.module.css'
 import DrumImage from '../../assets/images/drumsLowRez.jpg'
 import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
-import boom from '../../assets/sounds/boom.wav'
-import clap from '../../assets/sounds/clap.wav'
-import hiHat from '../../assets/sounds/hihat.wav'
-import kick from '../../assets/sounds/kick.wav'
-import openHat from '../../assets/sounds/openhat.wav'
-import ride from '../../assets/sounds/ride.wav'
-import snare from '../../assets/sounds/snare.wav'
-import tink from '../../assets/sounds/tink.wav'
-import tom from '../../assets/sounds/tom.wav'
-import boomMP3 from '../../assets/sounds/boom.mp3'
+import boom from '../../assets/boom.wav'
+import clap from '../../assets/clap.wav'
+import hiHat from '../../assets/hihat.wav'
+import kick from '../../assets/kick.wav'
+import openHat from '../../assets/openhat.wav'
+import ride from '../../assets/ride.wav'
+import snare from '../../assets/snare.wav'
+import tink from '../../assets/tink.wav'
+import tom from '../../assets/tom.wav'
+import boomMP3 from '../../assets/boom.mp3'
 
 
 class DrumApp extends React.Component {

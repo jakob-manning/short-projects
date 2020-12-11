@@ -19,17 +19,6 @@ class DrumApp extends React.Component {
     constructor(props) {
         super(props);
 
-        this.sound1 = React.createRef();
-        this.sound2 = React.createRef();
-        this.sound3 = React.createRef();
-        this.sound4 = React.createRef();
-        this.sound5 = React.createRef();
-        this.sound6 = React.createRef();
-        this.sound7 = React.createRef();
-        this.sound8 = React.createRef();
-        this.sound9 = React.createRef();
-        this.sound10 = React.createRef();
-
         this.state ={
             currentDrumName: '',
             drumming: false
